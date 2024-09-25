@@ -1,8 +1,6 @@
 import React from "react";
 import style from "./Product.module.css";
-import { Link, useNavigate } from "react-router-dom";
-import { deleteProduct, GetOneProduct } from "../../redux/actions/ActionProduct";
-import { useDispatch } from "react-redux";
+
 
 function Product({el}) {
   

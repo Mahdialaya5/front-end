@@ -1,0 +1,14 @@
+.card{
+    width:30%;
+    background-color: white;
+    border: 2px solid black;
+    height: max-content;
+  
+}
+.content{
+  padding-left: 2%;
+}
+.img{
+  height: 150px;
+  width: 100%;
+}

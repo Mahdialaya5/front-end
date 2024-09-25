@@ -1,4 +1,4 @@
-import { GET_CURRENT_SUCCESS, LOGIN, LOGINFAILED, REGISTER, REGISTERFAILED } from "../const/user";
+import { GET_CURRENT_SUCCESS, LOGINFAILED,  REGISTERFAILED } from "../const/user";
 
 const intialstate={
     currentuser:{},

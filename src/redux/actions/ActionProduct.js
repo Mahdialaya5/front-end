@@ -5,7 +5,7 @@ import { ADDPRODUCT, DELETEPRODUCT, EDITPRODUCT, GETONEPRODUCT, GETPRODUCTS } fr
 export const GetProducts = () => async (dispatch) => {
   try {
     
-    const res= await axios.get('http://localhost:4000/api/product')
+    const res= await axios.get('https://work-shop-mern-production.up.railway.app/api/product')
    
     dispatch({
         type:GETPRODUCTS,
@@ -18,7 +18,7 @@ export const GetProducts = () => async (dispatch) => {
 export const addProduct = (body,navigate) => async (dispatch) => {
     try {
       const token=document.cookie.split('=')[1]
-      const res= await axios.post('http://localhost:4000/api/product',body,{ headers: { Authorization: `Bearer ${token}` } })
+      const res= await axios.post('https://work-shop-mern-production.up.railway.app/api/product',body,{ headers: { Authorization: `Bearer ${token}` } })
       dispatch({
           type:ADDPRODUCT,
           Payload:res
@@ -41,7 +41,7 @@ export const GetOneProduct=(data,navigate)=>{
 export const editProduct = (id,data,navigate) => async (dispatch) => {
     try {
       const token=document.cookie.split('=')[1]
-      const res= await axios.patch(`http://localhost:4000/api/product/${id}`,data,{ headers: { Authorization: `Bearer ${token}` } })
+      const res= await axios.patch(`https://work-shop-mern-production.up.railway.app/api/product/${id}`,data,{ headers: { Authorization: `Bearer ${token}` } })
       dispatch({
           type:EDITPRODUCT,
           Payload:res
@@ -57,7 +57,7 @@ export const editProduct = (id,data,navigate) => async (dispatch) => {
 export const deleteProduct = (id) => async (dispatch) => {
     try {
       const token=document.cookie.split('=')[1]
-      const res= await axios.delete(`http://localhost:4000/api/product/${id}`,{ headers: { Authorization: `Bearer ${token}` } })
+      const res= await axios.delete(`https://work-shop-mern-production.up.railway.app/api/product/${id}`,{ headers: { Authorization: `Bearer ${token}` } })
       dispatch({
           type:DELETEPRODUCT,
           Payload:res
